@@ -17,36 +17,35 @@
  *
  */
 
-
 #ifndef COMMON_INCLUDE_H
 #define COMMON_INCLUDE_H
 
 // define the commonly included file to avoid a long include list
 // for Eigen
-#include <Eigen/Core>
-#include <Eigen/Geometry>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Geometry>
 using Eigen::Vector2d;
 using Eigen::Vector3d;
 
 // for Sophus
-#include <sophus/se3.h>
-#include <sophus/so3.h>
-using Sophus::SO3;
-using Sophus::SE3;
+#include "sophus/se3.hpp"
+#include "sophus/so3.hpp"
+using Sophus::SE3d;
+using Sophus::SO3d;
 
 // for cv
 #include <opencv2/core/core.hpp>
 using cv::Mat;
 
-// std 
-#include <vector>
-#include <list>
-#include <memory>
-#include <string>
+// std
 #include <iostream>
-#include <set>
-#include <unordered_map>
+#include <list>
 #include <map>
+#include <memory>
+#include <set>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
-using namespace std; 
+using namespace std;
 #endif

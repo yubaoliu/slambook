@@ -74,14 +74,14 @@ int main(int argc, char** argv)
 
         if (vo->state_ == myslam::VisualOdometry::LOST)
             break;
-        SE3 Twc = pFrame->T_c_w_.inverse();
+        Sophus::SE3d Twc = pFrame->T_c_w_.inverse();
 
         // show the map and the camera pose
         cv::Affine3d M(
             cv::Affine3d::Mat3(
-                Twc.rotation_matrix()(0, 0), Twc.rotation_matrix()(0, 1), Twc.rotation_matrix()(0, 2),
-                Twc.rotation_matrix()(1, 0), Twc.rotation_matrix()(1, 1), Twc.rotation_matrix()(1, 2),
-                Twc.rotation_matrix()(2, 0), Twc.rotation_matrix()(2, 1), Twc.rotation_matrix()(2, 2)),
+                Twc.rotationMatrix()(0, 0), Twc.rotationMatrix()(0, 1), Twc.rotationMatrix()(0, 2),
+                Twc.rotationMatrix()(1, 0), Twc.rotationMatrix()(1, 1), Twc.rotationMatrix()(1, 2),
+                Twc.rotationMatrix()(2, 0), Twc.rotationMatrix()(2, 1), Twc.rotationMatrix()(2, 2)),
             cv::Affine3d::Vec3(
                 Twc.translation()(0, 0), Twc.translation()(1, 0), Twc.translation()(2, 0)));
 

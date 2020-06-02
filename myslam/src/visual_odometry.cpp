@@ -175,7 +175,7 @@ void VisualOdometry::poseEstimationPnP()
     num_inliers_ = inliers.rows;
     cout << "pnp inliers: " << num_inliers_ << endl;
     T_c_w_estimated_ = Sophus::SE3d(
-        Sophus::SO3d::hat(Vector3d(rvec.at<double>(0, 0), rvec.at<double>(1, 0), rvec.at<double>(2, 0))),
+        Sophus::SO3d::exp(Vector3d(rvec.at<double>(0, 0), rvec.at<double>(1, 0), rvec.at<double>(2, 0))),
         Vector3d(tvec.at<double>(0, 0), tvec.at<double>(1, 0), tvec.at<double>(2, 0))
         );
 

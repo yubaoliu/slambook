@@ -30,8 +30,12 @@ using Eigen::Vector3d;
 // for Sophus
 #include "sophus/se3.hpp"
 #include "sophus/so3.hpp"
-using Sophus::SE3d;
-using Sophus::SO3d;
+
+typedef Sophus::SE3d SE3;
+typedef Sophus::SO3d SO3;
+
+// using Sophus::SE3d;
+// using Sophus::SO3d;
 
 // for cv
 #include <opencv2/core/core.hpp>

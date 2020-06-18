@@ -1,3 +1,4 @@
+myslam/bin
 *build*
 *.out
 CMakeCache.txt

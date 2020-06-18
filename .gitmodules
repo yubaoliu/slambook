@@ -1,0 +1,9 @@
+[submodule "slambook"]
+	path = slambook
+	url = https://github.com/gaoxiang12/slambook.git
+[submodule "slambook2"]
+	path = slambook2
+	url = https://github.com/gaoxiang12/slambook2.git
+[submodule "rgbd-slam-tutorial-gx"]
+	path = rgbd-slam-tutorial-gx
+	url = https://github.com/gaoxiang12/rgbd-slam-tutorial-gx.git
